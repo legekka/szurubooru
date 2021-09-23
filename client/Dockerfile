@@ -12,7 +12,7 @@ ARG CLIENT_BUILD_ARGS=""
 RUN BASE_URL="__BASEURL__" node build.js --gzip ${CLIENT_BUILD_ARGS}
 
 
-FROM --platform=$BUILDPLATFORM scratch as approot
+FROM scratch as approot
 
 COPY docker-start.sh /
 
